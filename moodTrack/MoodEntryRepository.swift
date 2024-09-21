@@ -18,8 +18,8 @@ class MoodEntryRepository {
      - By default, it uses the "workspace" (context) from the app's `AppDelegate`, which is what sets up
         the app's Core Data when the app launches.
      */
-    init (context: NSManagedObjectContext = PersistenceController.shared.container.viewContext) {
-    //init(context: NSManagedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext) {
+    init (context: NSManagedObjectContext = 
+          PersistenceController.shared.container.viewContext) {
         self.dataSource = context
     }
     
