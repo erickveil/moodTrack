@@ -10,7 +10,7 @@ import CoreData
 import UIKit
 
 class MoodEntryRepository {
-    private let context: NSManagedObjectContext
+    private let dataSource: NSManagedObjectContext
     
     /**
      Initializes the repository with a connection to the app's data source.
@@ -20,11 +20,11 @@ class MoodEntryRepository {
      */
     init (context: NSManagedObjectContext = PersistenceController.shared.container.viewContext) {
     //init(context: NSManagedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext) {
-        self.context = context
+        self.dataSource = context
     }
     
     func createMoodEntry(moodValue: Int, date: Date) {
-        let newEntry = MoodEntry(context: context)
+        let newEntry = MoodEntry(context: dataSource)
         newEntry.moodValue = Int16(moodValue)
         newEntry.date = date
         saveContext()
@@ -33,7 +33,7 @@ class MoodEntryRepository {
     func fetchAllMoodEntries() -> [MoodEntry] {
         let fetchRequest: NSFetchRequest<MoodEntry> = MoodEntry.fetchRequest()
         do {
-            let moodEntries = try context.fetch(fetchRequest)
+            let moodEntries = try dataSource.fetch(fetchRequest)
             return moodEntries
         } catch {
             print("Error fetching mood entries: \(error)")
@@ -48,13 +48,13 @@ class MoodEntryRepository {
     }
     
     func deleteMoodEntry(entry: MoodEntry) {
-        context.delete(entry)
+        dataSource.delete(entry)
         saveContext()
     }
     
     private func saveContext() {
         do {
-            try context.save()
+            try dataSource.save()
         } catch {
             print("Error saving context: \(error)")
         }
