@@ -15,6 +15,7 @@
 		C7E714522C9E095B00872300 /* moodTrack.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C7E714502C9E095B00872300 /* moodTrack.xcdatamodeld */; };
 		C7E714622C9E0D0500872300 /* MoodEntry+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E714602C9E0D0500872300 /* MoodEntry+CoreDataClass.swift */; };
 		C7E714632C9E0D0500872300 /* MoodEntry+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E714612C9E0D0500872300 /* MoodEntry+CoreDataProperties.swift */; };
+		C7E714652C9F31A700872300 /* MoodEntryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E714642C9F31A700872300 /* MoodEntryRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		C7E714512C9E095B00872300 /* moodTrack.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = moodTrack.xcdatamodel; sourceTree = "<group>"; };
 		C7E714602C9E0D0500872300 /* MoodEntry+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "MoodEntry+CoreDataClass.swift"; path = "moodTrack/MoodEntry+CoreDataClass.swift"; sourceTree = "<group>"; };
 		C7E714612C9E0D0500872300 /* MoodEntry+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "MoodEntry+CoreDataProperties.swift"; path = "moodTrack/MoodEntry+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		C7E714642C9F31A700872300 /* MoodEntryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodEntryRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				C7E7144E2C9E095B00872300 /* Persistence.swift */,
 				C7E714502C9E095B00872300 /* moodTrack.xcdatamodeld */,
 				C7E7144B2C9E095B00872300 /* Preview Content */,
+				C7E714642C9F31A700872300 /* MoodEntryRepository.swift */,
 			);
 			path = moodTrack;
 			sourceTree = "<group>";
@@ -150,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7E714622C9E0D0500872300 /* MoodEntry+CoreDataClass.swift in Sources */,
+				C7E714652C9F31A700872300 /* MoodEntryRepository.swift in Sources */,
 				C7E7144F2C9E095B00872300 /* Persistence.swift in Sources */,
 				C7E714482C9E095A00872300 /* ContentView.swift in Sources */,
 				C7E714632C9E0D0500872300 /* MoodEntry+CoreDataProperties.swift in Sources */,
